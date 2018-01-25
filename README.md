@@ -9,7 +9,11 @@ canvas刮刮卡，无依赖，适用于移动端和PC端。
 ```html
 <canvas id="guaguaka"></canvas>
 ```
-2. 引入JS: <script src="js/guaguaka.js"></script>
+2. 引入JS:
+```javascript
+<script src="js/guaguaka.js"></script>
+```
+
 3. 调用方法：
 
 ```javascript
