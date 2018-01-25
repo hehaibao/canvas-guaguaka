@@ -3,6 +3,10 @@ canvas刮刮卡，无依赖，适用于移动端和PC端。
 
 在线预览： https://hehaibao.github.io/canvas-guaguaka/
 
+效果预览：
+
+![image](https://github.com/hehaibao/canvas-guaguaka/blob/master/preview.gif)
+
 使用方法：
 
 1. 加入dom: 
