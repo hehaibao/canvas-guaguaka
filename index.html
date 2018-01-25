@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>canvas刮刮卡效果</title>
+    <style>
+        body{margin:0;padding:0;}
+        #desc{width:320px;text-align:center;height:32px;line-height:32px;font-weight:bold;border:2px dotted #ddd;margin:40px auto auto;}
+        #demo{width:320px;margin:20px auto;min-height:300px;}
+    </style>
+</head>
+<body>
+
+<!-- html -->
+<div id="desc">
+	刮刮卡来了，试试运气？
+	<a href="javascript:;" onClick="window.location.reload();">再刮一次</a>
+</div>
+
+<div id="demo">
+	<canvas id="guaguaka"></canvas>
+</div>
+
+<!-- js -->
+<script src="js/guaguaka.js"></script>
+<script>
+    var options = {
+        id: 'guaguaka', //canvas的ID
+        imgArr: ['images/p_0.jpg', 'images/p_1.jpg'], //奖品图片(建议统一大小，canvas是根据该图片大小渲染的)
+        circleWidth: 25, //涂抹时，圆点的大小(该参数可不传，默认25)，值越大则圆点越大
+        coverage: 0.5, //涂抹时，擦除面积达到了整个画布的 50%，则自动清除掉整个画布上的灰色层（值范围：0-1）
+        callback: function(index) { //擦除后的回调
+            // index为奖品的索引值
+            alert('你擦也过了，该我出场了吧~');
+        }
+    }
+    new Guaguaka(options);
+</script>
+
+</body>
+</html>
